@@ -4,6 +4,7 @@ import { ProjectsSection } from './components/ProjectsSection';
 import { SkillsSection } from './components/SkillsSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { ContactSection } from './components/ContactSection';
+import Certificates from './components/Certificates'; // 1. Import your new component
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <ProjectsSection />
       <SkillsSection />
       <ExperienceSection />
+      <Certificates /> {/* 2. Add it here right before the contact section (or wherever you prefer) */}
       <ContactSection />
     </div>
   );
