@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
 
 // Certificate image imports
 import cert1 from '../assets/Naren_Leadership Skilss Certificate.jpg';
@@ -90,7 +90,8 @@ export const Certificates: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-  const { scrollYProgress } = useScroll({
+  // Initialize scroll tracking (container reference bound to section)
+  useScroll({
     target: containerRef,
     offset: ['start 70%', 'end 90%'],
   });
